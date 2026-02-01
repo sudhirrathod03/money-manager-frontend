@@ -3,7 +3,7 @@
 A full-stack personal finance application that helps users track their income and expenses, visualize spending habits through analytics, and manage their financial health.
 
 ## 🚀 Live Demo
-**Frontend (Vercel):** [https://money-manager-frontend-mu.vercel.app/]  
+https://money-manager-frontend-mu.vercel.app/
 
 ## ✨ Features
 - **Dashboard:** View total balance, income, and expense summaries.
