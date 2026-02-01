@@ -14,8 +14,8 @@ Backend Repository:  https://github.com/sudhirrathod03/money-manager-backend
 
 3. LAST COMMITTED HASH IDs
 --------------------------
-Frontend Hash: [PASTE FRONTEND HASH HERE]
-Backend Hash:  [PASTE BACKEND HASH HERE]
+Frontend Hash: [985b942]
+Backend Hash:  [76aa651]
 
 4. DEMO VIDEO
 -------------
