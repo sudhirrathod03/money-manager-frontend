@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import { ToastContainer, Slide } from "react-toastify"; // Import Slide for smoother animation
+import { ToastContainer, Slide } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
@@ -10,12 +10,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
       </Routes>
       
-      {/* Global Notification Container */}
+
       <ToastContainer 
-        position="top-center"      // Position: Top Middle
-        transition={Slide}         // Animation: Smooth Slide
-        autoClose={2000}           // Closes faster (2 seconds)
-        hideProgressBar={true}     // Hides the bar for a cleaner look
+        position="top-center"      
+        transition={Slide}      
+        autoClose={2000}         
+        hideProgressBar={true}     
         newestOnTop={true} 
         closeOnClick 
         rtl={false} 
@@ -23,7 +23,7 @@ function App() {
         draggable 
         pauseOnHover 
         theme="light"
-        limit={3}                  // Prevents screen clutter
+        limit={3}                 
       />
     </>
   );

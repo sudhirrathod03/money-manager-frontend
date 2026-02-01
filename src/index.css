@@ -1,10 +1,10 @@
 @import "tailwindcss";
 body {
-  background-color: #f3f4f6; /* Light gray background */
+  background-color: #f3f4f6; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Custom Scrollbar for tables */
+
 ::-webkit-scrollbar {
   width: 5px;
 }

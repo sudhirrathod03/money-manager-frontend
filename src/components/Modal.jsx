@@ -104,7 +104,7 @@ const Modal = ({
             className="bg-white rounded-2xl shadow-2xl w-[450px] overflow-hidden m-4"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
+
             <div className="flex justify-between items-center p-5 bg-gradient-to-r from-sky-800 to-sky-900 text-white">
               <h2 className="text-xl font-bold tracking-wide">
                 {editable ? "Edit Record" : "New Transaction"}
@@ -117,7 +117,6 @@ const Modal = ({
               </button>
             </div>
 
-            {/* Tabs */}
             <div className="flex bg-gray-100 p-1 mx-4 mt-4 rounded-lg">
               {["expense", "income", "transfer"].map((tab) => (
                 <button
@@ -139,7 +138,6 @@ const Modal = ({
               ))}
             </div>
 
-            {/* Form */}
             <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-4">
               {activeTab === "transfer" ? (
                 <div className="flex gap-4">

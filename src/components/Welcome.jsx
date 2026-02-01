@@ -10,10 +10,8 @@ const Welcome = ({ onComplete }) => {
       transition={{ delay: 3.5, duration: 0.8, ease: "easeInOut" }}
       onAnimationComplete={onComplete}
     >
-      {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-black animate-gradient-xy"></div>
 
-      {/* Floating Abstract Shapes */}
       <motion.div
         className="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70"
         animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
@@ -26,7 +24,6 @@ const Welcome = ({ onComplete }) => {
         transition={{ duration: 7, repeat: Infinity }}
       />
 
-      {/* Text Content */}
       <div className="relative z-10 text-center">
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
@@ -48,9 +45,7 @@ const Welcome = ({ onComplete }) => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-
           Money<span className="text-green-600">Mint</span>
-
         </motion.h1>
 
         <motion.p
@@ -63,7 +58,6 @@ const Welcome = ({ onComplete }) => {
         </motion.p>
       </div>
 
-      {/* Loading Bar */}
       <motion.div
         className="relative z-10 mt-12 w-64 h-1 bg-gray-700 rounded-full overflow-hidden"
         initial={{ opacity: 0 }}

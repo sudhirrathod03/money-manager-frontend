@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion"; 
 
 const TransactionTable = ({ transactions, handleEdit, handleDelete }) => {
   // Animation variants for the container
@@ -9,12 +9,11 @@ const TransactionTable = ({ transactions, handleEdit, handleDelete }) => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Delay between each item appearing
+        staggerChildren: 0.1, 
       },
     },
   };
 
-  // Animation for each row
   const item = {
     hidden: { y: 20, opacity: 0 },
     show: { y: 0, opacity: 1 },
@@ -40,7 +39,6 @@ const TransactionTable = ({ transactions, handleEdit, handleDelete }) => {
             </tr>
           </thead>
 
-          {/* Wrap Tbody with motion */}
           <motion.tbody variants={container} initial="hidden" animate="show">
             {transactions.length > 0 ? (
               transactions.map((txn) => (

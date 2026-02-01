@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaList, FaChartPie } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { toast } from "react-toastify"; // Import Toast
+import { toast } from "react-toastify"; 
 import Header from "../components/Header";
 import Modal from "../components/Modal";
 import TransactionTable from "../components/TransactionTable";
@@ -53,11 +53,11 @@ const HomePage = () => {
     try {
       setLoading(true);
       await API.post("/delete-transaction", { transactionId: record._id });
-      toast.success("Transaction Deleted! 🗑️"); // SUCCESS TOAST
+      toast.success("Transaction Deleted! 🗑️"); 
       fetchTransactions();
     } catch (error) {
       console.log(error);
-      toast.error("Failed to delete transaction"); // ERROR TOAST
+      toast.error("Failed to delete transaction"); 
     } finally {
       setLoading(false);
     }
@@ -80,10 +80,10 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="container mx-auto mt-6 p-4"
       >
-        {/* --- FILTER BAR --- */}
+
         <div className="bg-white p-5 rounded-2xl shadow-lg border border-slate-100 flex flex-wrap justify-between items-end gap-4 mb-6">
           <div className="flex flex-wrap gap-4 items-end">
-            {/* Filters */}
+
             {[
               {
                 label: "Frequency",
@@ -136,7 +136,7 @@ const HomePage = () => {
               </div>
             ))}
 
-            {/* Custom Date */}
+
             {frequency === "custom" && (
               <div className="flex gap-2 border p-1 rounded-lg bg-gray-50">
                 <input
@@ -157,7 +157,6 @@ const HomePage = () => {
             )}
           </div>
 
-          {/* Actions */}
           <div className="flex gap-3">
             <div className="bg-gray-100 p-1 rounded-lg flex">
               <button
@@ -190,7 +189,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* --- CONTENT --- */}
+
         {loading ? (
           <div className="text-center py-20 text-gray-400">
             Loading your data...

@@ -15,7 +15,7 @@ import {
 import { motion } from "framer-motion";
 
 const Analytics = ({ transactions }) => {
-  // --- 1. DATA PREPARATION ---
+
 
   // Totals
   const totalTransactions = transactions.length;
@@ -78,8 +78,8 @@ const Analytics = ({ transactions }) => {
     .filter((item) => item.value > 0);
 
   const barChartData = [
-    { name: "Income", amount: totalIncomeTurnover, fill: "#10B981" }, // Green
-    { name: "Expense", amount: totalExpenseTurnover, fill: "#EF4444" }, // Red
+    { name: "Income", amount: totalIncomeTurnover, fill: "#10B981" }, // green
+    { name: "Expense", amount: totalExpenseTurnover, fill: "#EF4444" }, // red
   ];
 
   return (
@@ -89,9 +89,8 @@ const Analytics = ({ transactions }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* --- ROW 1: KEY METRICS CARDS --- */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Total Transactions Card */}
         <motion.div
           whileHover={{ scale: 1.02 }}
           className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden"
@@ -142,7 +141,6 @@ const Analytics = ({ transactions }) => {
           </div>
         </motion.div>
 
-        {/* Total Turnover Card */}
         <motion.div
           whileHover={{ scale: 1.02 }}
           className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 relative overflow-hidden"
@@ -196,9 +194,9 @@ const Analytics = ({ transactions }) => {
         </motion.div>
       </div>
 
-      {/* --- ROW 2: CHARTS --- */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* CHART 1: Expense Distribution (Pie) */}
+
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -240,7 +238,6 @@ const Analytics = ({ transactions }) => {
           </div>
         </motion.div>
 
-        {/* CHART 2: Income vs Expense (Bar) */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -268,9 +265,9 @@ const Analytics = ({ transactions }) => {
         </motion.div>
       </div>
 
-      {/* --- ROW 3: DETAILED PROGRESS BARS --- */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Income Progress */}
+
         <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
           <h4 className="text-lg font-bold mb-4 text-emerald-700">
             Income Sources
@@ -302,7 +299,7 @@ const Analytics = ({ transactions }) => {
           })}
         </div>
 
-        {/* Expense Progress */}
+
         <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
           <h4 className="text-lg font-bold mb-4 text-rose-700">
             Expense Breakdown
