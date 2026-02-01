@@ -1,16 +1,23 @@
+import React, { Suspense, lazy } from "react"; 
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
 import { ToastContainer, Slide } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css";
+
+const HomePage = lazy(() => import("./pages/HomePage")); 
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route 
+          path="/" 
+          element={
+            <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
+              <HomePage />
+            </Suspense>
+          } 
+        />
       </Routes>
-      
-
       <ToastContainer 
         position="top-center"      
         transition={Slide}      

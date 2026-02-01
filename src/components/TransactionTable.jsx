@@ -77,7 +77,7 @@ const TransactionTable = ({ transactions, handleEdit, handleDelete }) => {
                       {txn.division}
                     </span>
                   </td>
-                  <td className="p-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <td className="p-4 flex gap-3  transition-opacity">
                     <button
                       onClick={() => handleEdit(txn)}
                       className="text-blue-500 hover:text-blue-700 hover:scale-110 cursor-pointer transition"
