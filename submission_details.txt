@@ -1,0 +1,42 @@
+-------------------------------------------------------
+MoneyMint - HACKATHON SUBMISSION
+-------------------------------------------------------
+
+1. LIVE DEPLOYED URLs
+---------------------
+Frontend (Vercel): [https://money-manager-frontend-mu.vercel.app/]
+Backend (Render):  [https://money-manager-backend-fuyj.onrender.com]
+
+2. GITHUB REPOSITORIES
+----------------------
+Frontend Repository: https://github.com/sudhirrathod03/money-manager-frontend
+Backend Repository:  https://github.com/sudhirrathod03/money-manager-backend
+
+3. LAST COMMITTED HASH IDs
+--------------------------
+Frontend Hash: [PASTE FRONTEND HASH HERE]
+Backend Hash:  [PASTE BACKEND HASH HERE]
+
+4. DEMO VIDEO
+-------------
+Video Link: [https://drive.google.com/file/d/1GNJR8QZfXiA_WSH8Qvr-Qm8B2esHhSn5/view?usp=drive_link]
+
+5. PROJECT DESCRIPTION
+----------------------
+(See below for the drafted description)
+
+Project Title: MoneyMint - Personal Finance Tracker
+Problem Statement: Managing personal finances effectively is often difficult due to scattered data and a lack of visual insights. Individuals struggle to track where their money goes, leading to poor financial decisions.
+Solution: I built "Money Manager," a full-stack web application designed to simplify personal finance tracking. It allows users to record daily income and expenses, categorize transactions, and visualize their financial health through dynamic charts.
+
+Key Features:
+Transaction Management: Seamlessly add, edit, and delete income/expense records.
+Smart Filtering: Filter financial data by frequency (Last 7 days, Month, Year, Custom Range) and category.
+Visual Analytics: Interactive charts (Pie/Line graphs) to visualize spending patterns vs. income.
+Optimized Performance: Implemented React Lazy Loading to reduce initial load time and enhance user experience.
+Responsive Design: Fully responsive UI built with Tailwind CSS for mobile and desktop use.
+
+Tech Stack:
+Frontend: React.js, Vite, Tailwind CSS, Recharts
+Backend: Node.js, Express.js
+Database: MongoDB (Atlas)
