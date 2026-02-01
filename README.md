@@ -6,8 +6,8 @@ A full-stack personal finance application that helps users track their income an
 https://money-manager-frontend-mu.vercel.app/
 
 ## BOTH REPOSITORIES
-Frontend Repository: https://github.com/sudhirrathod03/money-manager-frontend
-Backend Repository:  https://github.com/sudhirrathod03/money-manager-backend
+- **Frontend Repository:** https://github.com/sudhirrathod03/money-manager-frontend
+- **Backend Repository:**  https://github.com/sudhirrathod03/money-manager-backend
 
 ## ✨ Features
 - **Dashboard:** View total balance, income, and expense summaries.
