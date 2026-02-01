@@ -5,6 +5,10 @@ A full-stack personal finance application that helps users track their income an
 ## 🚀 Live Demo
 https://money-manager-frontend-mu.vercel.app/
 
+## BOTH REPOSITORIES
+Frontend Repository: https://github.com/sudhirrathod03/money-manager-frontend
+Backend Repository:  https://github.com/sudhirrathod03/money-manager-backend
+
 ## ✨ Features
 - **Dashboard:** View total balance, income, and expense summaries.
 - **Transactions:** Add, Edit, and Delete financial records.
@@ -17,3 +21,4 @@ https://money-manager-frontend-mu.vercel.app/
 - **Frontend:** React.js, Vite, Tailwind CSS, Recharts, Axios
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
+
