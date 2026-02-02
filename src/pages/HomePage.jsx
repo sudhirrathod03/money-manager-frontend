@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaPlus, FaList, FaChartPie } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { toast } from "react-toastify"; 
+import { toast } from "react-toastify";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
 import TransactionTable from "../components/TransactionTable";
@@ -53,11 +53,11 @@ const HomePage = () => {
     try {
       setLoading(true);
       await API.post("/delete-transaction", { transactionId: record._id });
-      toast.success("Transaction Deleted! 🗑️"); 
+      toast.success("Transaction Deleted! 🗑️");
       fetchTransactions();
     } catch (error) {
       console.log(error);
-      toast.error("Failed to delete transaction"); 
+      toast.error("Failed to delete transaction");
     } finally {
       setLoading(false);
     }
@@ -70,6 +70,68 @@ const HomePage = () => {
 
   if (showIntro) return <Welcome onComplete={() => setShowIntro(false)} />;
 
+  const filters = [
+    {
+      label: "Frequency",
+      val: frequency,
+      set: setFrequency,
+      opts: [
+        { v: "7", l: "Week" },
+        { v: "30", l: "Month" },
+        { v: "365", l: "Year" },
+        { v: "custom", l: "Custom" },
+      ],
+    },
+    {
+      label: "Type",
+      val: type,
+      set: setType,
+      opts: [
+        { v: "all", l: "All" },
+        { v: "income", l: "Income" },
+        { v: "expense", l: "Expense" },
+      ],
+    },
+    {
+      label: "Division",
+      val: division,
+      set: setDivision,
+      opts: [
+        { v: "all", l: "All" },
+        { v: "Office", l: "Office" },
+        { v: "Personal", l: "Personal" },
+      ],
+    },
+    {
+      label: "Category",
+      val: category,
+      set: setCategory,
+      opts: [
+        { v: "all", l: "All" },
+        { v: "Salary", l: "Salary" },
+        { v: "Tip", l: "Tip" },
+        { v: "Project", l: "Project" },
+        { v: "Food", l: "Food" },
+        { v: "Movie", l: "Movie" },
+        { v: "Bills", l: "Bills" },
+        { v: "Medical", l: "Medical" },
+        { v: "Fee", l: "Fee" },
+        { v: "Tax", l: "Tax" },
+      ],
+    },
+    {
+      label: "Account",
+      val: account,
+      set: setAccount,
+      opts: [
+        { v: "all", l: "All" },
+        { v: "Cash", l: "Cash" },
+        { v: "Bank", l: "Bank" },
+        { v: "UPI", l: "UPI" },
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
@@ -80,44 +142,9 @@ const HomePage = () => {
         transition={{ duration: 0.5 }}
         className="container mx-auto mt-6 p-4"
       >
-
         <div className="bg-white p-5 rounded-2xl shadow-lg border border-slate-100 flex flex-wrap justify-between items-end gap-4 mb-6">
           <div className="flex flex-wrap gap-4 items-end">
-
-            {[
-              {
-                label: "Frequency",
-                val: frequency,
-                set: setFrequency,
-                opts: [
-                  { v: "7", l: "Week" },
-                  { v: "30", l: "Month" },
-                  { v: "365", l: "Year" },
-                  { v: "custom", l: "Custom" },
-                ],
-              },
-              {
-                label: "Type",
-                val: type,
-                set: setType,
-                opts: [
-                  { v: "all", l: "All" },
-                  { v: "income", l: "Income" },
-                  { v: "expense", l: "Expense" },
-                ],
-              },
-              {
-                label: "Account",
-                val: account,
-                set: setAccount,
-                opts: [
-                  { v: "all", l: "All" },
-                  { v: "Cash", l: "Cash" },
-                  { v: "Bank", l: "Bank" },
-                  { v: "UPI", l: "UPI" },
-                ],
-              },
-            ].map((f, i) => (
+            {filters.map((f, i) => (
               <div key={i} className="flex flex-col">
                 <label className="text-xs font-bold text-gray-500 mb-1">
                   {f.label}
@@ -135,7 +162,6 @@ const HomePage = () => {
                 </select>
               </div>
             ))}
-
 
             {frequency === "custom" && (
               <div className="flex gap-2 border p-1 rounded-lg bg-gray-50">
@@ -188,7 +214,6 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-
 
         {loading ? (
           <div className="text-center py-20 text-gray-400">
