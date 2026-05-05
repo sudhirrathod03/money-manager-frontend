@@ -54,7 +54,7 @@ const Welcome = ({ onComplete }) => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          Smart. Simple. Secure.
+          Smart. Simple. Secure
         </motion.p>
       </div>
 
