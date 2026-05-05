@@ -217,7 +217,7 @@ const HomePage = () => {
 
         {loading ? (
           <div className="text-center py-20 text-gray-400">
-            Loading your data...
+            Loading your data....
           </div>
         ) : (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
