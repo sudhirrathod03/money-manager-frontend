@@ -26,7 +26,7 @@ const Header = () => {
                 Test User
               </p>
               <p className="text-[10px] text-slate-400 font-medium uppercase tracking-wider">
-                Premium Member
+                Premium member
               </p>
             </div>
             <FaUserCircle className="text-3xl text-slate-300" />
