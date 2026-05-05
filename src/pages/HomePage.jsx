@@ -210,7 +210,7 @@ const HomePage = () => {
               onClick={() => setShowModal(true)}
               className="bg-green-700 hover:bg-green-600 cursor-pointer text-white px-5 py-2 rounded-lg shadow-lg shadow-black-200 font-semibold flex items-center gap-2 transition transform hover:-translate-y-1"
             >
-              <FaPlus /> Add Transaction
+              <FaPlus /> Add Transaction.
             </button>
           </div>
         </div>
