@@ -46,22 +46,30 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    if (!showIntro) fetchTransactions();
-  }, [frequency, type, division, category, account, selectedDate, showIntro]);
-
-  const handleDelete = async (record) => {
+  const fetchData = async () => {
     try {
       setLoading(true);
-      await API.post("/delete-transaction", { transactionId: record._id });
-      toast.success("Transaction Deleted! 🗑️");
-      fetchTransactions();
+
+      const res = await API.post("/get-transaction", {
+        userid: "test_user",
+        frequency,
+        selectedDate: frequency === "custom" ? selectedDate : [],
+        type,
+        division,
+        category,
+        account,
+      });
+
+      setAllTransaction(res.data);
     } catch (error) {
-      console.log(error);
-      toast.error("Failed to delete transaction");
+      console.error(error);
     } finally {
       setLoading(false);
     }
   };
+
+  fetchData();
+}, [frequency, selectedDate, type, division, category, account]);
 
   const handleEdit = (record) => {
     setEditable(record);
